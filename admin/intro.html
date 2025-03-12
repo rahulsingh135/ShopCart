@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       
+
+        .cont {
+            display: flex;
+           
+        }
+
+        .img {
+            
+            width: 700px;
+            height: 744px;
+            overflow: hidden;
+           
+
+        }
+
+
+
+        .btn {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            height: 100%;
+            font-size: 30px;
+            margin-top: 100px;
+            text-align: center;
+            border-radius: 5px solid black;
+
+
+        }
+
+        .simg {
+         
+            transition: all ease ;
+            width: 700px;
+            height: 744px;
+        }
+
+        .fimg {
+           position: absolute;
+           overflow: hidden;
+            width: 700px;
+            height: 700px;
+            
+            left: 0;
+            top: -730px;
+            transition: all ease 9s;
+
+        }
+        .fimgactive {
+            top: 800px;
+        }
+
+        .gimg {
+            position: absolute;
+            width: 215px;
+            height: 485px;
+            left: -150px;
+            top: 252px;
+            transition: all ease 5s;
+            opacity: calc(0.0);
+            transform: scaleX(-1);
+        }
+        .gimgactive {
+            left:0px ;
+            opacity: calc(1) ;
+
+        }
+        .timg {
+            position: absolute;
+            width: 200px;
+            top: 600px;
+            left: 223px;
+           
+        }
+
+
+        .bt {
+            border-radius: 10px;
+            background-color: rgb(71, 103, 155);
+            font-size: 30px;
+            width: 90px;
+            height: 100%;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cont">
+
+        <div class="img">
+
+            <img class="fimg" src="../flower.png" alt="">
+            <img class="simg" src="../shiv2.jpg" alt="">
+            <img class="gimg" src="../g1.png" alt="">
+            <img class="timg" src="../thali1.png" alt="">
+        </div>
+
+        <div class="btn">
+
+            <button class="btn1 bt">click</button>
+            <button class="btn2 bt">click</button>
+            <button class="btn3 bt">click</button>
+            <button class="btn4 bt">click</button>
+
+        </div>
+    </div>
+
+</body>
+
+
+
+<script>
+    $(".btn1").click(function () {
+        $(".fimg").toggleClass("fimgactive");
+
+    });
+    $(".btn2").click(function () {
+        $(".gimg").toggleClass("gimgactive");
+
+    });
+
+    /* $("#tt").hover(function () {
+         alert("hhee");
+ 
+     }
+     ,function(){
+        alert("hi");
+     }); */
+
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+<div class="container rounded bg-white mt-5">
+    <div class="row">
+        <div class="col-md-4 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5 text-black">
+                <img class="rounded-circle bg-secondary mt-3" src="../assets/images/pro_image/rahul.png" width="150" height="150"><br>
+                <!-- <span class="font-weight-bold">John Doe</span><span class="text-black-50">john_doe12@bbb.com</span><span>United States</span> -->
+                
+                <form action="./insert/pro_img_input.php" method="POST" enctype="multipart/form-data">
+                    <label class="btn btn-primary profile-button" for="file_choose">Edit</label>
+                    <input type="file" id="file_choose" name="file_input" style="display: none;" > <br>
+                    <input class="btn btn-primary profile-button" type="submit">
+                    
+                    <!-- <div class="mt-1 text-right"><input class="btn btn-primary profile-button" type="button" value="edit" ></div> -->
+                </form>
+            </div>
+        </div>
+        <div class="col-md-8 text-black">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex flex-row align-items-center  "><i class="fa fa-long-arrow-left mr-1 mb-1"></i>
+                        <h6>Back to home</h6>
+                    </div>
+                    <!-- <h6 class="text-right">Edit Profile</h6> -->
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="first name"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="last name"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Email"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Phone number"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="address"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Country"></div>
+                </div>
+                <!-- <div class="row mt-3">
+        <div class="col-md-6"><input type="text" class="form-control" placeholder="Bank Name" value="Bank of America"></div>
+        <div class="col-md-6"><input type="text" class="form-control" value="043958409584095" placeholder="Account Number"></div>
+    </div> -->
+                <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+            </div>
+        </div>
+    </div>
+</div>
